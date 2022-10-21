@@ -1,17 +1,14 @@
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class Main {
     public static void main(String[] args) {
-        //Задача 2
-        System.out.println("Задача 2");
+        //Задача 3
+        System.out.println("Задача 3");
         int[] arrNamber1 = generateRandomArray();
-        List<Integer> ints = Arrays.stream(arrNamber1)
-                                .boxed()
-                                .collect(Collectors.toList());
-        System.out.println("Минимальная сумма трат за день составила "+Collections.min(ints)+" рублей. Максимальная сумма трат за день составила "+ Collections.max(ints)+" рублей");
+        float totalSum=0;
+        for (int i = 0; i < arrNamber1.length; i++) {
+            totalSum += arrNamber1[i];
+        }
+        totalSum = totalSum / arrNamber1.length;
+        System.out.println("Средняя сумма трат за месяц составила "+totalSum+"рублей");
 
 
 
