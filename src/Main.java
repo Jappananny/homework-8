@@ -7,6 +7,7 @@ public class Main {
         for (int i = 0; i < arrNumber1.length; i++) {
             totalSum += arrNumber1[i];
         }
+
         System.out.println("Сумма трат за месяц составила "+totalSum+" рублей");
 
 
