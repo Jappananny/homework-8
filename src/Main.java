@@ -2,12 +2,12 @@ public class Main {
     public static void main(String[] args) {
         //Задача 3
         System.out.println("Задача 3");
-        int[] arrNamber1 = generateRandomArray();
+        int[] arrNumber1 = generateRandomArray();
         float totalSum=0;
-        for (int i = 0; i < arrNamber1.length; i++) {
-            totalSum += arrNamber1[i];
+        for (int i = 0; i < arrNumber1.length; i++) {
+            totalSum += arrNumber1[i];
         }
-        totalSum = totalSum / arrNamber1.length;
+        totalSum = totalSum / arrNumber1.length;
         System.out.println("Средняя сумма трат за месяц составила "+totalSum+"рублей");
 
 
