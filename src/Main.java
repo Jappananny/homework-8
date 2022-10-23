@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
         //Задача 2
         System.out.println("Задача 2");
-        int[] arrNamber1 = generateRandomArray();
-        List<Integer> ints = Arrays.stream(arrNamber1)
+        int[] arrNumber1 = generateRandomArray();
+        List<Integer> ints = Arrays.stream(arrNumber1)
                                 .boxed()
                                 .collect(Collectors.toList());
         System.out.println("Минимальная сумма трат за день составила "+Collections.min(ints)+" рублей. Максимальная сумма трат за день составила "+ Collections.max(ints)+" рублей");
