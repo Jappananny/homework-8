@@ -8,19 +8,24 @@ public class Main {
         //Задача 2
         System.out.println("Задача 2");
         int[] arrNumber1 = generateRandomArray();
-        List<Integer> ints = Arrays.stream(arrNumber1)
-                                .boxed()
-                                .collect(Collectors.toList());
-        System.out.println("Минимальная сумма трат за день составила "+Collections.min(ints)+" рублей. Максимальная сумма трат за день составила "+ Collections.max(ints)+" рублей");
+        int total = 0;
+        int totalMax = 0;
+        int totalMin = 0;
+        for (int i = 0; i < arrNumber1.length; i++) {
+            if (totalMax < arrNumber1[i]) {
+                totalMax = arrNumber1[i];
+            }
+        }
+        totalMin=totalMax;
+        for (int i = 0; i < arrNumber1.length; i++) {
+            if (totalMin > arrNumber1[i]) {
+                totalMin = arrNumber1[i];
+            }
+        }
 
-
-
-
+            System.out.println("Минимальная сумма трат за день составила " + totalMin + " рублей. Максимальная сумма трат за день составила " + totalMax + " рублей");
 
     }
-
-
-
 
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
